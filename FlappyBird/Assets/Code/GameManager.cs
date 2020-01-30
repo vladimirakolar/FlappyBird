@@ -29,9 +29,49 @@ public class GameManager : MonoBehaviour
 
     public bool GameOver { get { return gameOver; } }
 
-    private void Awake()
+    void Awake()
     {
         Instance = this;
+    }
+
+    void OnEnable()
+    {
+        CountdownText.OnCountdownFinished += OnCountdownFinished;
+        TapController.OnPlayerDied += OnPlayerDied;
+        TapController.OnPlayerScored += OnPlayerScored;
+
+    }
+
+    void OnDisable()
+    {
+        CountdownText.OnCountdownFinished -= OnCountdownFinished;
+        TapController.OnPlayerDied -= OnPlayerDied;
+        TapController.OnPlayerScored -= OnPlayerScored;
+    }
+
+    void OnCountdownFinished()
+    {
+        SetPageState(PageState.None);
+        OnGameStarted();
+        score = 0;
+        gameOver = false;
+    }
+
+    void OnPlayerDied()
+    {
+        gameOver = true;
+        int savedScore = PlayerPrefs.GetInt("HightScore");
+        if (score>savedScore)
+        {
+            PlayerPrefs.SetInt("HightScore", score);
+        }
+        SetPageState(PageState.GameOver);
+    }
+
+    void OnPlayerScored()
+    {
+        score++;
+        scoreText.text = score.ToString();
     }
 
     void SetPageState(PageState state)
