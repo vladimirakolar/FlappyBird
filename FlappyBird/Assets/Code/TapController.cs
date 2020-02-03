@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-
 [RequireComponent(typeof(Rigidbody2D))]
+
 public class TapController : MonoBehaviour
 {
     public delegate void PlayerDelegate();
@@ -26,6 +27,7 @@ public class TapController : MonoBehaviour
         dowRotation = Quaternion.Euler(0, 0, -90);
         forwardRotation = Quaternion.Euler(0, 0, 35);
         game = GameManager.Instance;
+        rigidbody.simulated = false;
        
     }
 
@@ -53,7 +55,7 @@ public class TapController : MonoBehaviour
         transform.rotation = Quaternion.identity;
     }
 
-    private void Update()
+    void Update()
     {
         if (game.GameOver) return;
 

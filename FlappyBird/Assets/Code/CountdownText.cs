@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Text))]
+
 public class CountdownText : MonoBehaviour
 {
     public delegate void CountdownFinished();
@@ -13,8 +14,8 @@ public class CountdownText : MonoBehaviour
 
     void OnEnable()
     {
-       // countdown = GetComponent<Text>();
-     //   countdown.text = "3";
+        countdown = GetComponent<Text>();
+      //  countdown.text = "3";
         StartCoroutine("Countdown");
     }
 
@@ -23,7 +24,7 @@ public class CountdownText : MonoBehaviour
         int count = 3;
         for (int i = 0; i < count; i++)
         {
-    //        countdown.text = (count - i).ToString();
+      //      countdown.text = (count - i).ToString();
             yield return new WaitForSeconds(1);
         }
 

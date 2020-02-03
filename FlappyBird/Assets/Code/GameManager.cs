@@ -25,9 +25,10 @@ public class GameManager : MonoBehaviour
     }
 
     int score = 0;
-    bool gameOver = false;
+    bool gameOver = true;
 
     public bool GameOver { get { return gameOver; } }
+    public int Score { get { return score; } }
 
     void Awake()
     {
@@ -60,10 +61,10 @@ public class GameManager : MonoBehaviour
     void OnPlayerDied()
     {
         gameOver = true;
-        int savedScore = PlayerPrefs.GetInt("HightScore");
+        int savedScore = PlayerPrefs.GetInt("HighScore");
         if (score>savedScore)
         {
-            PlayerPrefs.SetInt("HightScore", score);
+            PlayerPrefs.SetInt("HighScore", score);
         }
         SetPageState(PageState.GameOver);
     }
