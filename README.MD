@@ -18,7 +18,7 @@ When designing, the use of 2D physics, triggers, parallaxing, object association
 
 ### Tools ###
 * *2D space*
-* *Demo *
+* *Demo version*
 * *2D animation*
 * *2D models*
 * *Game Asset*
