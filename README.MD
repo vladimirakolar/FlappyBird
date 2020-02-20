@@ -1,5 +1,5 @@
 ## Demo preview ##
-Preview of the game in available on
+Preview of the game is available on
 - GitHub page : **[Flappy Bird](https://vladimirakolar.github.io/FlappyBird/)**
 - Simmer page : **[Flappy Bird](https://simmer.io/@VladimiraKolar/flappy-bird)**
 
