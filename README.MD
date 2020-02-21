@@ -4,10 +4,9 @@ Preview of the game is available on
 - Simmer page : **[Flappy Bird](https://simmer.io/@VladimiraKolar/flappy-bird)**
 
 ## Description ##
-I present to you a game that is probably one of the most playable.
-Flappy Bird is a game that is born from scratch. It is made using Unity programs and ancillary resources such as Gimp, Bfkr, and flatique.com. 
-For the game to be functional deserved scripts were created using C # and implemented in the game itself. 
-When designing, the use of 2D physics, triggers, parallaxing, object associations, various sounds is repentant.
+Flappy Bird is a game that is developed from scratch. 
+It is made using the Unity cross-platform game engine, together with Gimp image editor, and resources from flaticon.com. 
+The functionality of the game is coded in C# programming language. The game is designed using 2D physics, triggers, parallaxing, object associations, and various sounds.
 
 ## Tools and technologes ##
 ### Technologes ###
